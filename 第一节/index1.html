@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- React的核心库 与宿主环境无关 -->
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <!-- 依赖核心库，将核心库的功能与页面结合 提供与DOM相关的功能 -->
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <!-- 可以将ES6代码转化为ES5代码 -->
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+        // 创建span元素
+        var span = React.createElement('span',{},'你好啊！')
+        // 创建一个H1元素
+        var h1 = React.createElement("h1",{title:'第一个React元素'},"Hello,", " World!", span);
+        ReactDOM.render(h1, document.getElementById('example'));
+    </script>
+</body>
+
+</html>

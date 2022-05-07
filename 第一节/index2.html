@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSX书写方式</title>
+    <!-- React的核心库 与宿主环境无关 -->
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <!-- 依赖核心库，将核心库的功能与页面结合 提供与DOM相关的功能 -->
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <!-- 编译JSX -->
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel"> // 表示这块代码由babel编译，浏览器不需要管
+        // 创建span元素
+        // var span = React.createElement('span', {}, '你好啊！')
+        // 创建一个H1元素
+        // var h1 = React.createElement("h1", { title: '第一个React元素' }, "Hello,", " World!", span);
+        var h1 = <h1 title="第一个React元素">hello, world!<span>你好啊!</span></h1>
+        ReactDOM.render(h1, document.getElementById('root'));
+    </script>
+</body>
+
+</html>
