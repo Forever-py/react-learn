@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Tick from './componenets/Tick';
+import A from './componenets/Test';
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
 let number = 10;
 // function start() {
@@ -16,4 +18,4 @@ let number = 10;
 
 // start();
 
-root.render(<Tick number={number} />)
+root.render(<><Tick number={number} /><A /></>)
