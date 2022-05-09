@@ -1,21 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Tick from './componenets/Tick';
-import A from './componenets/Test';
-
+// import Ball from './componenets/Ball';
+import BallList from './componenets/BallList';
 const root = ReactDOM.createRoot(document.getElementById('root'))
-let number = 10;
-// function start() {
-//     const timer = setInterval(() => {
-//         number--;
-//         if (number === 0) {
-//             clearInterval(this.timer);
-//             return;
-//         }
-//         root.render(<Tick number={number} />)
-//     }, 1000)
+
+// const obj = {
+// left: 100,
+// top: 100,
+// xSpeed: 200,
+// ySpeed: 150,
+// bg:'#00ffff'
 // }
-
-// start();
-
-root.render(<><Tick number={number} /><A /></>)
+// root.render(<Ball {...obj}/>)
+root.render(<BallList/>)
