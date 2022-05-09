@@ -17,6 +17,7 @@ async function fetchAllStudents() {
 }
 
 async function render() {
+    root.render(<div>正在加载中...</div>)
     const stus = await fetchAllStudents(); // 获取学生数据
     root.render(<ul>
         <StudentsList stus={stus} />
