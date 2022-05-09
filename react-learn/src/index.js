@@ -11,6 +11,7 @@ const appkey = "jerry_1602593073067";
  * 获取所有的学生数据
  */
 async function fetchAllStudents() {
+    
     // resp.json() 解析成json格式
     const stus = await fetch("https://open.duyiedu.com/api/student/findAll?appkey=" + appkey).then(resp => resp.json()).then(resp => resp.data);
     return stus
