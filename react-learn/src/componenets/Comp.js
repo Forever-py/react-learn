@@ -18,9 +18,11 @@ export default class Comp extends Component {
             return {
                 n: cur.n + 1
             }
+        }, () => {
+            console.log('state更新完成', this.state.n); // 会在所有状态更新完成,并且重新渲染后执行
         })
-        this.setState(cur=> ({n: cur.n + 1}));
-        this.setState(cur=> ({n: cur.n + 1}));
+        this.setState(cur => ({ n: cur.n + 1 }));
+        this.setState(cur => ({ n: cur.n + 1 }));
 
         // console.log(this.state.n); // 还没有重新渲染,说明目前状态仍然没有改变
     }
