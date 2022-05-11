@@ -26,6 +26,7 @@ export default class TickControl extends Component {
         if (this.state.isOver) {
             status = "倒计时完成";
         }
+        console.log(this); // 会发现handleOver挂载在对象上，而不是原型上
         return (
             <div>
                 <Tick onOver={this.handleOver} number={10} />
