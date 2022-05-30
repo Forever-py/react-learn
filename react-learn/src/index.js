@@ -1,11 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Test from "./componenets/Test";
+import App from "./componenets/App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(
-    <div>
-        <Test />
-    </div>
-);
+root.render(<App />);
