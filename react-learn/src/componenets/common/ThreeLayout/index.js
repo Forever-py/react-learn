@@ -1,23 +1,33 @@
 import React from "react";
 import "./index.css";
-export default function ThreeLayout(props) {
-    const defaultProps = {
-        leftWidth: 200,
-        rightWidth: 200,
-        minWidth: 800,
-        gap: 0,// 间隙
-    }
-    const datas = Object.assign({}, defaultProps, props)
+import types from '../../../utils/CommonTypes'
+import PropTypes from 'prop-types'
 
+ThreeLayout.defaultProps = {
+    leftWidth: 200,
+    rightWidth: 200,
+    minWidth: 800,
+    gap: 0,// 间隙
+}
+
+ThreeLayout.protoTypes = {
+    children: types.children,
+    leftWidth: PropTypes.number,
+    rightWidth: PropTypes.number,
+    minWidth: PropTypes.number,
+    gap: PropTypes.number,
+}
+
+export default function ThreeLayout(props) {
     return (
-        <div className="three-layout" style={{ width: datas.minWidth }}>
+        <div className="three-layout" style={{ width: props.minWidth }}>
             <div className="main">
                 {props.children}
             </div>
-            <div className="aside-left" style={{ width: datas.leftWidth ,marginRight:datas.gap}}>
+            <div className="aside-left" style={{ width: props.leftWidth, marginRight: props.gap }}>
                 {props.left}
             </div>
-            <div className="aside-right" style={{ width: datas.rightWidth ,marginLeft:datas.gap}}>
+            <div className="aside-right" style={{ width: props.rightWidth, marginLeft: props.gap }}>
                 {props.right}
             </div>
         </div>
