@@ -12,6 +12,8 @@ ThreeLayout.defaultProps = {
 
 ThreeLayout.protoTypes = {
     children: types.children,
+    left:PropTypes.node,
+    right:PropTypes.node,
     leftWidth: PropTypes.number,
     rightWidth: PropTypes.number,
     minWidth: PropTypes.number,
